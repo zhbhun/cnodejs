@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "dayjs": "^1.8.34",
+    "weui-miniprogram": "^1.0.5"
+  }
+}

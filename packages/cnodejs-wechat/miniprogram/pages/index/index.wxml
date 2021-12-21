@@ -1,0 +1,26 @@
+<scroll-view class="container" lower-threshold="{{1000}}" refresher-enabled="{{true}}"
+	refresher-triggered="{{refreshing}}" bindrefresherrefresh="handleRefresh" bindscrolltolower="handleScrollToLower"
+	scroll-y="{{true}}" scroll-with-animation="{{true}}">
+	<view class="content-ontainer">
+		<view wx:for="{{data}}" wx:key="id" class="topic" data-id="{{item.id}}" bindtap="openDetail">
+			<view class="topic__title">
+				<text class="topic__title__text">{{item.title}}</text>
+			</view>
+			<view class="topic__author">
+				<view class="topic__author__avatar" data-id="{{item.author.loginname}}" catchtap="openUser">
+					<image class="topic__author__avatar__image" lazy-load="true" mode="aspectFill" src="item.author.avatar_url">
+					</image>
+				</view>
+				<text class="topic__author__name">{{item.author.loginname}}</text>
+				<text class="topic__author__time">{{item.create_at}}</text>
+			</view>
+			<view class="topic__content">
+				<text>{{item.content}}</text>
+			</view>
+			<view class="topic__footer">
+				<text class="topic__footer__text">{{item.visit_count + '阅读' + ' • ' + item.reply_count + '评论'}}</text>
+			</view>
+		</view>
+	</view>
+	<mp-loading type="circle"></mp-loading>
+</scroll-view>

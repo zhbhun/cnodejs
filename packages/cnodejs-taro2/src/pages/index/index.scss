@@ -1,0 +1,16 @@
+.home__scrollview {
+  background-color: #fafafa;
+}
+
+.more-loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.more-loader__text {
+  color: #999;
+  font-size: 14px;
+}

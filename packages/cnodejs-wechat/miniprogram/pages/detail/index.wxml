@@ -1,0 +1,38 @@
+<view wx:if="{{!!data}}">
+  <view class="topic">
+    <view class="topic__header">
+      <view class="topic__title">
+        <text class="topic__title__text">{{data.title}}</text>
+      </view>
+      <view class="topic__author">
+        <view class="topic__author__avatar">
+          <image class="topic__author__avatar__image" lazy-load="true" mode="aspectFill" src="data.author.avatar_url">
+          </image>
+        </view>
+        <text class="topic__author__name">{{data.author.loginname}}</text>
+        <text class="topic__author__time">{{data.create_at}}</text>
+      </view>
+    </view>
+    <view class="topic__content">
+      <rich-text nodes="{{data.content}}"></rich-text>
+    </view>
+  </view>
+  <view wx:if="{{data.replies && data.replies.length > 0}}" class="replies">
+    <view class="replies__header">
+      <text>{{data.replies.length}}条回复</text>
+    </view>
+    <view wx:for="{{data.replies}}" class="reply">
+      <view class="reply__author">
+        <view class="reply__author__avatar">
+          <image class="reply__author__avatar__image" lazy-load="true" mode="aspectFill" src="item.author.avatar_url">
+          </image>
+        </view>
+        <text class="reply__author__name">{{item.author.loginname}}</text>
+        <text class="reply__author__time">{{item.create_at}}</text>
+      </view>
+      <view class="reply__content">
+        <rich-text nodes="{{item.content}}"></rich-text>
+      </view>
+    </view>
+  </view>
+</view>

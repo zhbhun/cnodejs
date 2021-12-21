@@ -1,0 +1,81 @@
+/**index.wxss**/
+page {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.container {
+  height: 100%;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  padding: 24rpx 32rpx;
+  background-color: #fff;
+}
+
+.topic__title {
+  margin-bottom: 0px;
+}
+
+.topic__title__text {
+  font-size: 32rpx;
+  font-weight: 700;
+  line-height: 48rpx;
+  word-break: break-all;
+}
+
+.topic__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 72rpx;
+}
+
+.topic__author__avatar {
+  margin: 0 8rpx;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.topic__author__avatar__image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.topic__author__name {
+  margin: 0 8rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666;
+}
+
+.topic__author__time {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.topic__content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  margin-bottom: 4px;
+  color: #232323;
+  font-size: 14px;
+  line-height: 20px;
+  word-spacing: break-all;
+  text-align: left;
+}
+
+.topic__footer__text {
+  color: #999;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}

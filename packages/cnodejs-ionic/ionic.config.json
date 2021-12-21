@@ -1,0 +1,7 @@
+{
+  "name": "cnodejs-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
